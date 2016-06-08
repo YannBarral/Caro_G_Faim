@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Mes ingrédients</h1>
+
+    <form method="get" action="{{ path('ingredient_new') }}">
+        <button class="marg" type="submit">Nouvel ingrédient</button>
+    </form>
+
+    {{ form_start(form, {'class': 'form_list' }) }}
+    <input type="hidden" name="_method" value="GET" >
+
+    <div class="column-list-ingred">
+
+        {% for categorie in categories %}
+            {% if categorie.ingredients.count %}
+
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th colspan="2">{{ categorie.libelle }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for ingredient in categorie.ingredients %}
+
+                        <tr>
+                            <td>
+                                {{ ingredient.libelle }}
+                            </td>
+                            <td>
+                                    <button type="submit" class="modif" formaction="{{ path('ingredient_edit', { 'id': ingredient.id }) }}"> modif. </button>
+
+
+                                {% if ingredient.apparaitrePlats.count %}
+                                    <button class="button-no-click" disabled="disabled"> suppr. </button>
+                                {% else %}
+
+                                    <button type="submit" class="delete" formaction="{{ path('ingredient_delete', { 'id': ingredient.id }) }}"> suppr. </button>
+
+                                {% endif %}
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {{ form_end(form) }}
+
+{% endblock %}

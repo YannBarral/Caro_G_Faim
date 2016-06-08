@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ingredient</h1>
+    <form method="get" action="{{ path('ingredient_new') }}">
+        <button class="marg" type="submit">Nouvel ingrédient</button>
+    </form>
+    <form method="get" action="{{ path('ingredient_index') }}">
+        <button class="marg" type="submit">Retour à la liste</button>
+    </form>
+
+    <ul>
+        <li>
+            <a href="{{ path('ingredient_index') }}">Retour</a>
+        </li>
+    </ul>
+    <table>
+        <tbody>
+            <tr>
+                <th>Libellé&#8239;:&nbsp;</th>
+                <td>{{ ingredient.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Catégorie&#8239;:&nbsp;</th>
+                <td>{{ ingredient.categorie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

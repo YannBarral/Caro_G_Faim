@@ -1,0 +1,96 @@
+.bloc-table {
+    width: 100%;
+    display: flex;
+}
+
+.table.table-bordered {
+    width: 40%;
+    /*margin: 0 auto 2.5% auto;*/
+    margin: inherit;
+    border: none;
+}
+
+.table.table-bordered td>a {
+    color: forestgreen;
+}
+
+.table.table-bordered td>a:hover {
+    color: lightslategrey;
+}
+
+.bloc-table table:first-child {
+    margin-left: 0;
+}
+
+.bloc-table table:last-child {
+    margin-right: 0;
+}
+
+.table.table-bordered button {
+    margin: 0.2em 0.1em;
+}
+
+.table.table-bordered tr td:last-child {
+    /*width: 30%;*/
+    text-align: right;
+}
+
+.table {
+    background-color: rgba(255,255,255,0.65);
+    /*margin-top: 20px;*/
+}
+
+.table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    /*background-color: #0089FF;*/
+    background-image: linear-gradient(to bottom,#e6c618 0,#E7EC1A 100%);
+    border-color: black;
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: none;
+}
+
+.td-two>tbody>tr>td:nth-child(2) {
+    width: 45%;
+}
+
+.show-table {
+    margin: 2.5% auto;
+    width: 100%;
+}
+
+
+.show-table .table.table-bordered tr td:last-child li {
+    list-style: none;
+    text-align: left;
+}
+.show-table .table.table-bordered tr td:last-child ul {
+    padding: 0;
+}
+
+.photo {
+    background-size:cover;
+    height:50px;
+    width:50px;
+}
+
+.photo_show {
+    margin:0 auto;
+    background-size:cover;
+    height:250px;
+    width:250px;
+    border:8px solid white;
+}
+
+.photo_edit {
+    background-size:cover;
+    height:200px;
+    width:200px;
+    border:8px solid white;
+    margin-bottom:20px;
+}

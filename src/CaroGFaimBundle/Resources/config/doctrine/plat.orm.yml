@@ -1,0 +1,53 @@
+CaroGFaimBundle\Entity\plat:
+    type: entity
+    table: null
+    repositoryClass: CaroGFaimBundle\Repository\platRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        libelle:
+            type: string
+            length: 255
+            unique: true
+        note:
+            type: integer
+        annotations:
+            type: text
+            nullable: true
+        photofilename:
+            type: string
+            length: 255
+            nullable: true
+    manyToOne:
+        type_plat:
+            targetEntity: type_plat
+            inversedBy: plats
+            joinColumn:
+                name: fid_type_plat
+                referencedColumn: id
+                nullable: false
+        diner:
+            targetEntity: diner
+            inversedBy: plats_servis
+            joinColumn:
+                name: fid_diner
+                referencedColumn: id
+                nullable: true
+    manyToMany:
+        ingredients:
+            targetEntity: ingredient
+            inversedBy: apparaitre_plats
+            joinTable:
+                name: contenir
+                joinColumns:
+                    fid_plat:
+                        referenceColumnName: id
+                        onDelete: cascade
+                inverseJoinColumns:
+                    fid_ingredient:
+                        referenceColumnName: id
+    lifecycleCallbacks: {  }

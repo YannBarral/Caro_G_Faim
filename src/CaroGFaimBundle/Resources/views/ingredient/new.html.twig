@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nouvel ingrédient</h1>
+
+    <div class="center">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Ajouter" />
+        <input type="button" value="Annuler" back_href="{{ path('ingredient_index') }}" />
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

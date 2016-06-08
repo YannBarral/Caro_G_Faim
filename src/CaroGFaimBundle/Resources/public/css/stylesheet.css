@@ -1,0 +1,109 @@
+.navbar-inverse {
+    background-image: linear-gradient(to bottom,#e6c618 0,#E7EC1A 100%);
+    color: #222222;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: black;
+}
+
+.navbar-brand {
+    font-size: 26px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+
+.navbar {
+    border-radius: 0px;
+    /* margin: 0 -35px; */
+    width: 105%;
+    margin-left: -2.5%;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color:#72b00b;
+}
+
+.bandeau {
+    vertical-align: initial;
+    position: relative;
+    margin-left: 20%;
+}
+
+#index {
+    background-image: url("/bundles/carogfaim/images/carocuisine.jpg");/**/
+    background-size: cover;
+    height: 70vh;
+    width: 55%;
+    margin: 3% auto;
+}
+
+.proch-din {
+    position: relative;
+    top: 42vh;
+    margin: 0 3%;
+    padding: 1%;
+    height: 25vh;
+    background-color: rgba(255,255,255,0.65);
+}
+
+button.marg {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+button.button-no-click {
+    border-color: rgba(0,0,0,0);
+    color: darkgrey;
+    cursor: auto;
+}
+button.button-no-click:hover {
+    color: darkgrey;
+}
+
+button {
+    color: forestgreen;
+}
+
+button:hover {
+    color: lightslategrey;
+}
+
+.center input[type=submit],
+.center input[type=file],
+.center input[type=button] {
+    color: forestgreen;
+}
+
+.center input[type=submit]:hover,
+.center input[type=file]:hover,
+.center input[type=button]:hover {
+    color: lightslategrey;
+}
+
+.column-list span>a {
+    color: forestgreen;
+}
+
+.column-list span>a:hover {
+    color: lightslategrey;
+}
+
+.list-form select[multiple] {
+    height: 100vh;
+}
+
+.align_stars
+{
+    margin-left: 0;
+    margin-bottom: 0;
+<<<<<<< HEAD
+}
+
+.glyphicon
+{
+    color: gold;
+
+}

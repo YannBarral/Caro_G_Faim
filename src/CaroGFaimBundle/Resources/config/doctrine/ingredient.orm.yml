@@ -1,0 +1,31 @@
+CaroGFaimBundle\Entity\ingredient:
+    type: entity
+    table: null
+    repositoryClass: CaroGFaimBundle\Repository\ingredientRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        libelle:
+            type: string
+            length: 255
+            unique: true
+    manyToOne:
+        categorie:
+            targetEntity: categorie
+            inversedBy: ingredients
+            joinColumn:
+                name: fid_categorie
+                referencedColumn: id
+                nullable: false
+    manyToMany:
+        personnes:
+            targetEntity: personne
+            mappedBy: exclure_ingredients
+        apparaitre_plats:
+            targetEntity: plat
+            mappedBy: ingredients
+    lifecycleCallbacks: {  }
